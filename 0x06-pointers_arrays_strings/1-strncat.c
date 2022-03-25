@@ -1,12 +1,14 @@
 #include "holberton.h"
 /**
- *_strcat -  concatenates two strings
+ *_strncat -  concatenates two strings
  *@dest: A pointer to an char that will be updated
  *@src: A pointer to an char that will be updated
+ *@n: value
  *Return: dest
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
+
 {
 	int i, j;
 
@@ -17,7 +19,7 @@ char *_strcat(char *dest, char *src)
 	}
 
 	j = 0;
-	while (src[j] != '\0') /*WHILE concatenate dest with src*/
+	while (j < n && src[j] != '\0') /*WHILE concatenate dest with src*/
 	{
 		dest[i] = src[j];
 		j++;  /*sum j*/
